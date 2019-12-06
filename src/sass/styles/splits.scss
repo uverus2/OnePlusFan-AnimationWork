@@ -1,0 +1,111 @@
+.split-general {
+    height: 270px;
+    position: absolute;
+    z-index: 1;
+    transition: 1500ms all ease-in-out;
+    overflow: hidden;
+}
+
+.split-wrap {
+    position: relative;
+    height: 270px;
+    overflow: hidden;
+}
+
+.split-content {
+    height: 100%;
+    margin: auto;
+}
+
+.split-left {
+    width: 65%;
+    color: $onePlus-white;
+    left: 0;
+    background: linear-gradient( rgba(12, 12, 12, 0.7), rgba(12, 12, 12, 0.7)), url("../images/leftSideOriginal.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split-right {
+    width: 35%;
+    right: 0;
+    background: linear-gradient( rgba(235, 0, 41, 0.7), rgba(235, 0, 41, 0.7)), url("../images/rightSideOriginal.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split-left:hover,
+.split-right:hover {
+    z-index: 2;
+    width: 70%;
+    transition: width 2s ease-in-out;
+}
+
+//// Button
+.split-content button {
+    cursor: pointer;
+    border-radius: 25px;
+    border: solid 2px transparent;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 45px;
+    margin: 0 0 2em;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    letter-spacing: 0;
+}
+
+.split-left button {
+    background-color: $onePlus-red;
+}
+
+.split-right button {
+    background-color: $onePlus-ligthgrey;
+    color: $onePlus-white;
+}
+
+.btnSplit:hover,
+.btnSplit:active {
+    letter-spacing: 5px;
+}
+
+.btnSplit:after,
+.btnSplit:before {
+    backface-visibility: hidden;
+    border: 1px solid rgba(#fff, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+
+.btnSplit:hover:after,
+.btnSplit:hover:before {
+    backface-visibility: hidden;
+    border-color: #fff;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+.btnSplit:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
+
+@media screen and (max-width: 600px) {
+    .split-right {
+        width: 50%;
+    }
+    .split-left {
+        width: 50%;
+    }
+}

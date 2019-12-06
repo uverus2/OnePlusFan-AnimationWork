@@ -1,0 +1,142 @@
+    .menu ul li {
+        text-decoration: none;
+        list-style: none;
+        position: relative;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    #menuSvgInside {
+        width: 100%;
+        height: 400px;
+    }
+    
+    #menuSvgInside path {
+        fill: $onePlus-ligthgrey;
+        stroke-width: 2;
+        stroke: $onePlus-black;
+    }
+    
+    #menuSvgInside text {
+        fill: $onePlus-white;
+        font-size: 30px;
+        font-family: Lato-Black;
+    }
+    
+    .dash-path {
+        stroke-dasharray: 500;
+        stroke-dashoffset: 1000;
+        animation: dash 2s forwards;
+    }
+    
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 500;
+        }
+        to {
+            stroke: $onePlus-black;
+            stroke-dashoffset: 0;
+            fill: $onePlus-white;
+            stroke-width: 0;
+        }
+    }
+    
+    .shape-show {
+        opacity: 0;
+        animation: shapeShow 2s forwards;
+    }
+    
+    @keyframes shapeShow {
+        0% {
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.4;
+        }
+        50% {
+            opacity: 0.6;
+        }
+        75% {
+            opacity: 0.8;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    .menu {
+        height: 0px;
+    }
+    
+    .menu a {
+        color: $onePlus-white;
+        text-decoration: none;
+    }
+    
+    .menu a:hover {
+        color: $onePlus-ligthgrey;
+    }
+    
+    .left-side {
+        background: $onePlus-ligthgrey;
+        transform: translateY(-200%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 2;
+    }
+    
+    .right-side {
+        transform: translateX(160%);
+        background: $onePlus-red;
+        transition: transform 0.4s ease-in-out;
+        z-index: 2;
+        height: 100vh;
+    }
+    
+    .translate-fix {
+        transform: translateX(0);
+        transform: translateY(0);
+        height: 100vh;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .body-wrap {
+        overflow-x: hidden;
+    }
+    
+    .body-menu {
+        overflow: hidden;
+    }
+    
+    .menu-buttom {
+        position: relative;
+        right: 0;
+        z-index: 3;
+    }
+    
+    .header {
+        position: absolute;
+    }
+    
+    #menuSVG {
+        width: 50px;
+        height: 80px;
+    }
+    
+    .menu-general {
+        stroke: $onePlus-red;
+        stroke-width: 5;
+    }
+    
+    @media screen and (max-width: 500px) {
+        .translate-fix {
+            height: 50vh;
+        }
+        .padding-top-fix {
+            padding-top: 50px !important;
+        }
+    }
+    
+    @media screen and (max-width: 400px) {
+        #menuSvgInside {
+            height: 250px;
+        }
+    }

@@ -1,0 +1,281 @@
+body {
+    font-family: Lato-Black;
+    background: $onePlus-ligthgrey;
+}
+
+// ScrollBar Custom styles
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $onePlus-black;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $onePlus-ligthgrey;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: $onePlus-red;
+}
+
+.devider {
+    height: 30px;
+    border: solid 2px $onePlus-red;
+    background-color: $onePlus-red;
+}
+
+.devider-to-rigth {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    width: 65%;
+    transform: translateX(-200%);
+    opacity: 0;
+}
+
+.devider-to-left {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 35%;
+    position: absolute;
+    right: 0;
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+.devider-fix {
+    transform: translateX(0);
+    transition: transform 3s ease-in-out;
+    opacity: 1;
+}
+
+#video {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video {
+    width: 60%;
+    height: 60vh;
+    transition: width 1s ease-in-out;
+}
+
+.video-wrap {
+    height: 100vh !important;
+}
+
+.video-fix {
+    width: 100% !important;
+    height: 100vh !important;
+    transition: width 4s ease-in-out;
+}
+
+#stopDeer,
+#startDeer {
+    display: none;
+    // border-radius: 25px;
+    text-align: center;
+    border: none;
+    // border: solid 2px transparent;
+    background: transparent;
+    color: $onePlus-black;
+    font-size: 30px;
+    font-weight: 600;
+    max-width: 120px;
+    padding: 10px;
+    text-transform: uppercase;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: all 250ms ease-in-out;
+}
+
+.special {
+    border-radius: 50%;
+    padding: 0px 7px;
+    border: solid 0px transparent;
+    background: $onePlus-red;
+    color: $onePlus-white;
+}
+
+#stopDeer:hover .special,
+#startDeer:hover .special {
+    padding: 0px 0px;
+}
+
+#stopDeer:hover,
+#startDeer:hover {
+    border-radius: 25px;
+    border: solid 2px transparent;
+    background: $onePlus-red;
+    color: $onePlus-white;
+    transition: all 250ms ease-in-out;
+}
+
+.threePictures:hover {
+    opacity: 0.4;
+}
+
+.pictureTitle {
+    position: absolute;
+    opacity: 0;
+    color: $onePlus-white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 5px;
+}
+
+.pictureTitle span {
+    color: $onePlus-red;
+}
+
+.contain-content {
+    background: $onePlus-black;
+}
+
+.contain-content:hover .pictureTitle {
+    opacity: 1;
+}
+
+.bounceEffect {
+    animation: bounce 2s linear;
+}
+
+.footer-btn {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: $onePlus-red;
+    border-radius: 35%;
+    box-shadow: 0 7px 16px -5px $onePlus-black;
+    color: $onePlus-black;
+    overflow: hidden;
+    position: relative;
+}
+
+.footer-btn i {
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.2s linear;
+}
+
+.footer-btn:hover i {
+    transform: scale(1.3);
+    color: #f1f1f1;
+}
+
+.footer-btn::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: $onePlus-black;
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+
+.footer-btn:hover::before {
+    animation: footerButton 0.5s 1;
+    top: -10%;
+    left: -10%;
+}
+
+.middle {
+    position: static;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
+@keyframes footerButton {
+    0% {
+        left: -110%;
+        top: 90%;
+    }
+    50% {
+        left: 10%;
+        top: -30%;
+    }
+    100% {
+        top: -10%;
+        left: -10%;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-65px)
+    }
+    76% {
+        transform: translateY(-65px)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+#footerPin {
+    position: relative;
+    z-index: 100;
+    background: $onePlus-white;
+    box-shadow: 0px 3px 15px $onePlus-black;
+}
+
+footer {
+    background: $onePlus-ligthgrey;
+    height: 45vh;
+    color: $onePlus-white;
+}
+
+.mainFooter {
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+#trigger {
+    height: 100px;
+}
+
+.positionChange {
+    z-index: 10;
+    position: static !important;
+}
+
+@media screen and (max-width: 1300px) {
+    footer {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    footer {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    footer {
+        height: 65vh;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    footer {
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        height: 95vh;
+    }
+}

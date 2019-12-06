@@ -1,0 +1,31 @@
+.logoSVG {
+    width: 250px;
+    height: 100px;
+}
+
+.mainFooter .logoSVG {
+    width: 400px;
+    height: 100px;
+}
+
+.logoSVG text {
+    font-family: Lato-Black;
+    fill: $onePlus-red;
+    font-size: 40px;
+}
+
+.logoSVG rect {
+    fill: #ffffff;
+    stroke: $onePlus-red;
+    stroke-width: 4;
+}
+
+.logoSVG .plus {
+    stroke: $onePlus-red;
+    stroke-width: 4
+}
+
+.logoSVG .neverSettle {
+    fill: #ffffff;
+    transform: translateX(-20px);
+}

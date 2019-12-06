@@ -1,0 +1,31 @@
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    border: solid red 2px;
+    z-index: 10;
+}
+
+#spriteSheet {
+    max-width: 100%;
+    max-height: 40vh;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    border: none;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: optimizeQuality;
+}
+
+@media screen and (max-width: 450px) {
+    #spriteSheet {
+        max-height: 20vh;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #spriteSheet {
+        max-height: 30vh;
+    }
+}

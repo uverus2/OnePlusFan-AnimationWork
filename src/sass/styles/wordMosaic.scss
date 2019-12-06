@@ -1,0 +1,86 @@
+.mosaic {
+    background: $onePlus-black;
+}
+
+#svgWordMosaic {
+    height: 450px;
+    width: 450px;
+}
+
+.image-mosaic {
+    height: 450px;
+    width: 80%;
+    margin: auto;
+    background: linear-gradient( rgba(12, 12, 12, 0.3), rgba(12, 12, 12, 0.3)), url("../images/imageOne.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: width 350ms ease-in-out;
+}
+
+.image-mosaic-fix {
+    width: 100%;
+    transition: width 350ms ease-in-out;
+}
+
+.padding-top-fix {
+    padding-top: 150px;
+}
+
+.mosaic-word {
+    fill: $onePlus-red;
+}
+
+.mosaic-size1 {
+    font-size: 50px;
+}
+
+.mosaic-size2 {
+    font-size: 25px;
+}
+
+.mosaic-size3 {
+    font-size: 30px;
+}
+
+.mosaic-size4 {
+    font-size: 40px;
+}
+
+.mosaic-size5 {
+    font-size: 85px;
+}
+
+.blink:hover {
+    text-shadow: 0 0 20px $onePlus-white;
+    animation: wiggle 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    fill: $onePlus-white;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.blink2:hover {
+    fill: $onePlus-white;
+    text-shadow: 0 0 20px $onePlus-white;
+}
+
+@keyframes wiggle {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
